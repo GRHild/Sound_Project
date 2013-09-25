@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="practice.css">
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
+
+		<title>Sound_Project</title>
+
+  </head>
+	
+	<body>
+
+    <script>
+//initialize client with app credentials
+SC.initialize({
+  client_id: 'YOUR_CLIENT_ID',
+  redirect_uri: 'REDIRECT_URL'
+});
+
+// initiate auth popup
+SC.connect(function() {
+  SC.get('/me', function(me) { 
+    alert('Hello, ' + me.username); 
+  });
+});
+</script>
+
+<div>
+  <div class="header">
+  	<h1> Music Co. </h1>
+  </div>
+
+  <div>
+    <div class="navbar">
+      <ul class="navlinks">
+    	  <li class="link1"><a href="#"> Indie</a></li>
+    	  <li class="link2"><a href="#"> Hip-Hop</a></li>
+    	  <li class="link3"><a href="#"> House</a></li>
+    	  <li class="link4"><a href="#"> Metal</a></li>
+      </ul>
+    </div>
+	<div class="text">
+		Add Here
+		<div class="input">
+		 ----------------------
+		</div>
+	</div>
+
+  <div class="footer">
+  	Contacts: MG Incorporated
+  </div>
+
+  </div>
+
+</div>
+
+	</body>
+
+</html>
