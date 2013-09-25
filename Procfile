@@ -1,1 +1,1 @@
-web: bundle exec ruby clashing-hashes.rb -p $PORT
+web: bundle exec ruby sound.rb -p $PORT
