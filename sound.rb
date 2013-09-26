@@ -4,7 +4,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'koala'
 
-require_relative './lib/social_one.rb'
+require_relative './lib/soundcloudlink.rb'
 
 include SocialOne
 

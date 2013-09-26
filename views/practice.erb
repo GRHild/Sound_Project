@@ -7,12 +7,15 @@
 
     <style>
     html {
-        background-image:url('brushed.png');
+        
       }
 
       body {
-        background-color: #272822;
-        height: 300px;
+        background-color: white;
+        height: 800px;
+        width: auto;
+        margin: 0;
+        background-image:url('brickwall.png');
       }
 
       .header {
@@ -20,27 +23,18 @@
         color: white;
         text-align: center;
         padding: 2px 0px 2px 0px;
+        box-shadow: 10px 10px 5px #4F4D4D;
       }
 
       .navbar {
         background: #f04d2c;
-        float: left;
+        width: 150px;
+        box-shadow: 10px 10px 5px #4F4D4D;
+        display: inline-block;
+        margin: 20px 20px 20px 0px;
       }
 
-
-      .link1{
-        text-decoration: none;
-        padding: 20px 0px 20px 0px;
-      }
-      .link2 {
-        text-decoration: none;
-        padding: 20px 0px 20px 0px;
-      }
-      .link3 {
-        text-decoration: none;
-        padding: 20px 0px 20px 0px;
-      }
-      .link4 {
+      .link{
         text-decoration: none;
         padding: 20px 0px 20px 0px;
       }
@@ -49,6 +43,9 @@
         background-color: white;
         text-align: center;
         margin: 100px 0px 30px 0px;
+        display: inline-block;
+        text-align: center;
+        float: center;
       }
 
       .input {
@@ -63,6 +60,8 @@
         background: #f04d2c;
         text-align: center;
         color: white;
+        box-shadow: 1px -3px 3px 3px #4F4D4D;
+        margin-top: 50px;
         padding: 5px 0px 5px 0px;
       }
     </style>
@@ -79,25 +78,26 @@
   <div>
     <div class="navbar">
       <ul class="navlinks">
-    	  <li class="link1"><a href="#"> Indie</a></li>
-    	  <li class="link2"><a href="#"> Hip-Hop</a></li>
-    	  <li class="link3"><a href="#"> House</a></li>
-    	  <li class="link4"><a href="#"> Metal</a></li>
+    	  <li class="link"><a href="#"> Indie</a></li>
+    	  <li class="link"><a href="#"> Hip-Hop</a></li>
+    	  <li class="link"><a href="#"> House</a></li>
+    	  <li class="link"><a href="#"> Metal</a></li>
       </ul>
     </div>
-	<div class="text">
-		Add Here
-		<div class="input">
-		 ----------------------
+
+	 <div class="text">
+		  Add Here
+		  <div class="input">
+		    <div class="posts">
+      <form name="input" action="/facebook" method="post">
+        Dope song: <input type="text" name="update"><br />
+       <input type="submit" value="submit">
+      </form>
+    </div>
 		</div>
 	</div>
 
-  <div class="posts">
-    <form name="input" action="/facebook" method="post">
-      Dope song: <input type="text" name="update"><br />
-      <input type="submit" value="submit">
-    </form>
-  </div>
+
 
   <div class="footer">
   	Contacts: MG Incorporated

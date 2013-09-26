@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'koala'
-require 'soundcloud'
+
 
 
 module SocialOne
