@@ -8,6 +8,7 @@ module SocialOne
 
   class User
 
+    attr_accessor :client
 # # Initialize a new user.
 #     def initialize
 
@@ -25,12 +26,12 @@ module SocialOne
 
 # register a client with YOUR_CLIENT_ID as client_id_
     def initialize
-      client = SoundCloud.new(:client_id => ENV['CLIENT_ID'])
+      @client = SoundCloud.new(:client_id => ENV['CLIENT_ID'])
     end
 
 # get 10 hottest tracks
     def get_song
-      tracks = client.get('/tracks', :limit => 10, :order => 'hotness')
+      tracks = @client.get('/tracks', :limit => 10, :order => 'hotness')
 # print each link
       tracks.each do |track|
       puts track.permalink_url

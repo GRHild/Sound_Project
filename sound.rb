@@ -9,17 +9,13 @@ require_relative './lib/soundcloudlink.rb'
 
 include SocialOne
 
-# get '/' do
-#   erb :practice
-# end
-
 get '/' do
   erb :practice
 end
 
 post '/facebook' do
-  @user = SoundCloud.new
-  @results = @user.get_song("Evil Friends")
+  @user = SocialOne::User.new
+  @results = @user.get_song
   erb:results
 end
 
