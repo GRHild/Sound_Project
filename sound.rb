@@ -16,7 +16,8 @@ end
 post '/facebook' do
   @user = SocialOne::User.new
   @results = @user.get_song
-  erb:results
+  @results2 = @user.post_fb_text(params[:update])
+  erb :results
 end
 
 # post '/facebook' do
