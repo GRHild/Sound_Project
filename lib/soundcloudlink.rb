@@ -8,7 +8,7 @@ module SocialOne
 
   class User
 
-    attr_accessor :client
+    attr_accessor :client 
 # Initialize a new user.
     def initialize
 # register a client with YOUR_CLIENT_ID as client_id_
@@ -24,24 +24,25 @@ module SocialOne
     end
   
     def get_song
-      tracks = client.get('/artists', :limit => 4, :order => 'hotness')
+      tracks_array = [] 
+      tracks = @client.get('/tracks', :limit => 4, :order => 'hotness')
       tracks.each do |track|
-        puts track.permalink_url
-        end
+        tracks_array << track.permalink_url
+      
+      end
+
+      # tracks_array.each do |track| 
+      #   @graph.put_connections('me', 'feed', :message => tracks)
+      #   puts tracks_array
+      # end
+      # @client.post_fb_text(tracks_array)
     end
 
-
-
-# get 10 hottest tracks
-#     def get_song(artist)
-#       tracks = @client.get('/artist', :limit => 2, :order => 'hotness')
-# # print each link
-#       tracks_array = []
-#       tracks.each do |track|
-#         tracks_array << track.permalink_url.to_s
-#       return tracks_array
-#       end
-#     end
+    # def post_song
+    #   tracks_array.each do |track|
+    #     post_fb_text(track)
+    #   end
+    # end
 
   end
 end
