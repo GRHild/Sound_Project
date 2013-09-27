@@ -20,8 +20,3 @@ post '/facebook' do
   erb :results
 end
 
-# post '/facebook' do
-#   @user = SocialOne::User.new
-#   puts @result = @user.post_fb_text(params[:update])
-#   erb :results
-# end
