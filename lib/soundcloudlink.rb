@@ -23,26 +23,20 @@ module SocialOne
       @graph.put_connections('me', 'feed', :message => status_update)
     end
   
-    def get_song
-      tracks_array = [] 
+    def get_songs
+      #tracks_array = [] 
       tracks = @client.get('/tracks', :limit => 4, :order => 'hotness')
-      tracks.each do |track|
-        tracks_array << track.permalink_url
       
-      end
+      #tracks.each do |track|
+      #  tracks_array << track.permalink_url
+      #end
 
-      # tracks_array.each do |track| 
-      #   @graph.put_connections('me', 'feed', :message => tracks)
-      #   puts tracks_array
+      # tracks_array.each do |track|
+      #   track.to_s
       # end
-      # @client.post_fb_text(tracks_array)
+      
+      tracks.map! { |track| track.permalink_url.to_s }
     end
-
-    # def post_song
-    #   tracks_array.each do |track|
-    #     post_fb_text(track)
-    #   end
-    # end
 
   end
 end

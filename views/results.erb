@@ -1,2 +1,6 @@
-<p>This is what you posted!<%= @result %></p>
-<p>This is what was posted? <%= @results2 %> </p>
+<p>This is what was posted? <%= @results %> </p>
+<ul>
+	<% @songs.each do |song| %>
+		<li><%= song %></li>
+	<% end %>
+</ul>
